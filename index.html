@@ -468,7 +468,7 @@
 
           <div id="overview">
             <br>
-            <h2 class="title is-3 has-text-centered">Overview</h2>
+            <h2 class="title is-3 has-text-centered">Abstract</h2>
             <div class="paragraph">
               <p>
               Large transformer models are proving to be a powerful tool for 3D vision and novel view synthesis. However, the standard Transformer's well-known quadratic complexity makes it difficult to scale these methods to large scenes. To address this challenge, we propose the Local View Transformer (LVT), a large-scale scene reconstruction and novel view synthesis architecture that circumvents the need for the quadratic attention operation. Motivated by the insight that spatially nearby views provide more useful signal about the local scene composition than distant views, our model processes all information in a local neighborhood around each view. To attend to tokens in nearby views, we leverage a novel positional encoding that conditions on the relative geometric transformation between the query and nearby views. We decode the output of our model into a 3D Gaussian Splat scene representation that includes both color and opacity view-dependence. Taken together, the Local View Transformer enables reconstruction of arbitrarily large, high-resolution scenes in a single forward pass.
@@ -481,16 +481,27 @@
             <div id="diagram">
               <div class="paragraph">
                 <br>
-                <b>Overview of the Local View Transformer:</b>  LVT takes input view sequences and the corresponding local ray maps, and patchifies them to obtain input tokens. Within each LVT block, the tokens from a window of <em>w</em> neighbor views (here <em>w</em>=3 for illustration) relative to a query view are consolidated and updated with the corresponding relative transformation embeddings. The tokens from the <em>query</em> view then selectively attend to these neighbor tokens (instead of attending to all input tokens, as full self-attention does). This LVT block is repeated 24 times. The processed tokens are then unpatchified and decoded to pixel-aligned Gaussian splat parameters. The combined Gaussian splats are rendered using the 3DGS renderer and compared to ground truth during training.
-
-                <!-- <b>Overview of the Quark Model:</b>  Quark takes a set of multi-view images or video streams and reconstructs a compact layered depth map (LDM) representation that is used to perform image-based rendering. Network inference is fast; scene reconstruction and rendering <em>combined</em> run at 30fps on a single NVIDIA A100 GPU at 1080p (1920x1080) resolution, enabling Quark to perform high quality novel view synthesis <em>on-demand</em> for a dynamic viewpoint even for scenes with moving content. During each time step the network creates a pyramid of downsampled and encoded input images using scalar downsampling factors k and then infers an LDM in the frustum of the novel viewpoint through a series of n <em>Update &amp; Fuse</em> steps that use across-view attention to fuse information from multiple input views. This iterative, multi-scale approach also saves compute by gradually increasing spatial resolution while decreasing layer count. A final bilinear upsample by a scalar factor of s followed by non-linear feature activation is used to produce an LDM at the final output resolution.  -->
+                <b>Overview of the Local View Transformer:</b>  Instead of the quadratic self-attention operation typically used in transformers, LVT processes information within local neighborhoods relative to each view, based on the insight that spatially nearby views are generally more informative about the local scene structure than distant ones. Cascading these LVT blocks increases the effective receptive field. Our model takes a set of input views representing the entire scene and, in a single feed-forward pass, outputs a Gaussian splat scene representation which can then be rendered to various target cameras. LVT scales linearly, rather than quadratically, with the number of input images, and generalizes to varied sequence lengths and out-of-distribution camera trajectories.
               </div>
               <br>
-              <img src="./lvt-files/pipeline.png" class="img">
+              <img src="./lvt-files/teaser.png" class="img">
               <br>
             </div>
 
           </div>
+
+          <div id="howitworks">
+            <br>
+            <h2 class="title is-3 has-text-centered">How it works</h2>
+          <div id="diagram">
+              <div class="paragraph">
+                <br>
+                LVT takes input view sequences and the corresponding local ray maps, and patchifies them to obtain input tokens. Within each LVT block, the tokens from a window of <em>w</em> neighbor views (here <em>w</em>=3 for illustration) relative to a query view are consolidated and updated with the corresponding relative transformation embeddings. The tokens from the <em>query</em> view then selectively attend to these neighbor tokens (instead of attending to all input tokens, as full self-attention does). This LVT block is repeated 24 times. The processed tokens are then unpatchified and decoded to pixel-aligned Gaussian splat parameters. The combined Gaussian splats are rendered using the 3DGS renderer and compared to ground truth during training.
+              </div>
+              <br>
+              <img src="./lvt-files/pipeline.png" class="img"  style="width: 90%;">
+              <br>
+            </div>
 
           <br>
           <h2 class="title is-3 has-text-centered" style="margin-bottom:-10px" id="video-cmp">Video Result Comparisons</h2>
@@ -659,7 +670,7 @@
           <div class="tile is-ancestor is-vertical">
             <div class="tile is-parent">
               <div class="tile is-child has-text-vcentered">
-                <a href="https://toobaimt.github.io/lvt/lvt-files/results/image_results/dl3dv/index.html"><img src="./Quark_ Real-time, High-resolution, and General Neural View Synthesis_files/rff.jpg" class="img thumbnails"></a>
+                <a href="https://toobaimt.github.io/lvt/lvt-files/results/image_results/dl3dv/index.html"><img src="./lvt-files/results/image_results/dl3dv/thumb.png" class="img thumbnails"></a>
                 <br>View result comparison on <a href="https://toobaimt.github.io/lvt/lvt-files/results/image_results/dl3dv/index.html"><strong>DL3DV</strong></a>.
               </div>
 
@@ -671,7 +682,7 @@
 
             <div class="tile is-parent">
               <div class="tile is-child has-text-vcentered">
-                <a href="https://toobaimt.github.io/lvt/lvt-files/results/image_results/tanks/index.html"><img src="./Quark_ Real-time, High-resolution, and General Neural View Synthesis_files/neural_3d_video.jpg" class="img thumbnails"></a>
+                <a href="https://toobaimt.github.io/lvt/lvt-files/results/image_results/tanks/index.html"><img src="./lvt-files/results/image_results/tanks/thumb.png" class="img thumbnails"></a>
                 <br>View result comparison on <a href="https://toobaimt.github.io/lvt/lvt-files/results/image_results/tanks/index.html"><strong>Tanks&Temples</strong></a>.
               </div>
 
