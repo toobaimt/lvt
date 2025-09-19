@@ -420,7 +420,7 @@
               <div class="item-4">
                 <figure class="image is-16by9">
                   <video class="has-ratio" muted controls loop autoplay playsinline>
-                    <source src="./lvt-files/results/carousel-results/lvtSH-flowers.mp4" type="video/mp4" width="100%" height="100%">
+                    <source src="./lvt-files/results/carousel-results/lvtSH-glassbuilding.mp4" type="video/mp4" width="100%" height="100%">
                       "Your browser does not support the video tag"
                   </video>
                 </figure>
@@ -574,40 +574,40 @@
           </div>
 
 
-          <video id="greenhouse-video" muted="" autoplay="" webkit-playsinline="" playsinline="" loop="" src="./lvt-files/results/video-results/lvtSH-greenhouse.mp4">
-            <source id="greenhouse-video-src" src="./lvt-files/results/video-results/lvtSH-greenhouse.mp4" poster="/data/test.jpg" type="video/mp4">
+          <video id="glassbuilding-video" muted="" autoplay="" webkit-playsinline="" playsinline="" loop="" src="./lvt-files/results/video-results/lvtSH-glassbuilding.mp4">
+            <source id="glassbuilding-video-src" src="./lvt-files/results/video-results/lvtSH-glassbuilding.mp4" poster="/data/test.jpg" type="video/mp4">
           </video>
           <div class="video-text">
-            <span class="overlay-text" id="greenhouse-text"><em>LVTSH</em></span>
+            <span class="overlay-text" id="glassbuilding-text"><em>LVTSH</em></span>
           </div>
-          <div class="base-row greenhouse-thumbnail-row">
-            <div class="base-col greenhouse-thumbnail-col">
-              <button class="thumbnail-btn active-btn" id="lvtSH-greenhouse">
+          <div class="base-row glassbuilding-thumbnail-row">
+            <div class="base-col glassbuilding-thumbnail-col">
+              <button class="thumbnail-btn active-btn" id="lvtSH-glassbuilding">
                 LVT<sub>SH-rgba</sub>
               </button>
             </div>
-            <div class="base-col greenhouse-thumbnail-col">
-              <button class="thumbnail-btn" id="lvt-base-greenhouse">
+            <div class="base-col glassbuilding-thumbnail-col">
+              <button class="thumbnail-btn" id="lvt-base-glassbuilding">
                 LVT<sub>base</sub>
               </button>
             </div>
-            <div class="base-col greenhouse-thumbnail-col">
-              <button class="thumbnail-btn" id="llrm-greenhouse">
+            <div class="base-col glassbuilding-thumbnail-col">
+              <button class="thumbnail-btn" id="llrm-glassbuilding">
                 Long-LRM
               </button>
             </div>
-            <div class="base-col greenhouse-thumbnail-col">
-              <button class="thumbnail-btn" id="3dgs-greenhouse">
+            <div class="base-col glassbuilding-thumbnail-col">
+              <button class="thumbnail-btn" id="3dgs-glassbuilding">
                 3DGS
               </button>
             </div>
-            <div class="base-col greenhouse-thumbnail-col">
-              <button class="thumbnail-btn" id="lvtSH-greenhouse_depth">
+            <div class="base-col glassbuilding-thumbnail-col">
+              <button class="thumbnail-btn" id="lvtSH-glassbuilding_depth">
                 LVT<sub>SH-rgba</sub> (depth)
               </button>
             </div>
-            <div class="base-col greenhouse-thumbnail-col">
-              <button class="thumbnail-btn" id="lvt-base-greenhouse_depth">
+            <div class="base-col glassbuilding-thumbnail-col">
+              <button class="thumbnail-btn" id="lvt-base-glassbuilding_depth">
                 LVT<sub>base</sub> (depth)
               </button>
             </div>
@@ -650,41 +650,34 @@
 
           <h2 class="title is-3 has-text-centered" id="image-cmp">Image Result Comparisons</h2>
 	  <div class="paragraph">
-            <p>We evaluate our method against various baselines across a diverse set of datasts below. We first compare our method with <a href="https://zju3dv.github.io/enerf/">ENeRF</a>, <a href="https://samsunglabs.github.io/MLI/">SIMPLI</a>, and <a href="https://mohammedsuhail.net/gen_patch_neural_rendering/">GPNR</a> on <a href="https://www.matthewtancik.com/nerf">Real Forward-facing</a>, <a href="https://nex-mpi.github.io/">Shiny</a>, and <a href="https://github.com/facebookresearch/Neural_3D_Video">Neural 3D Video</a> datasets. We then comapre our method with <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3DGS</a>, <a href="https://nvlabs.github.io/instant-ngp/">Instant NGP</a>, <a href="https://jonbarron.info/mipnerf360/">MipNeRF-360</a>, <a href="https://docs.nerf.studio/nerfology/methods/nerfacto.html">Nerfacto</a>, <a href="https://jonbarron.info/zipnerf/">ZipNeRF</a> on the <a href="https://dl3dv-10k.github.io/DL3DV-10K/">DL3DV</a> dataset. Finally, we show <a href="https://quark-3d.github.io/results/image_results/3dgs/index.html"><comparisons< a=""> with </comparisons<></a><a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3DGS</a>, <a href="https://nvlabs.github.io/instant-ngp/">Instant NGP</a>, <a href="https://jonbarron.info/mipnerf360/">MipNeRF-360</a>, and <a href="https://alexyu.net/plenoxels/">Plenoxels</a> on the <a href="https://jonbarron.info/mipnerf360/">Mip-NeRF360, </a><a href="https://www.tanksandtemples.org/">Tanks&amp;Temples</a>, and <a href="http://visual.cs.ucl.ac.uk/pubs/deepblending/">Deep Blending</a> datasets. </p>
+            <p>We train and evaluate our methods, LVT<sub>SH-rgba</sub> and LVT<sub>base</sub>, on <a href="https://dl3dv-10k.github.io/DL3DV-10K/">DL3DV</a> - a large-scale dataset of 4K resolution videos captured from bounded and unbounded real-world scenes for benchmarking novel view synthesis, and <a href="https://google.github.io/realestate10k/">RealEstate10K</a>. LVT surpasses prior methods to achieve state-of-the-art novel view synthesis on large scenes.
+            <br>
+            We additionally perform zero-shot evaluation on <a href="https://www.tanksandtemples.org/">Tanks&Temples</a> (the train and truck scenes) and <a href="https://jonbarron.info/mipnerf360/">Mip-NeRF360</a> using LVT trained on DL3DV dataset. Despite not being trained on Tanks&Temples, LVT<sub>SH-rgba</sub> surpasses 3DGS in LPIPS, PSNR and SSIM, and performs competitively with 3DGS on Mip-NeRF360. </p>
+            <!-- <p>We evaluate our method against various baselines across a diverse set of datasts below. We first compare our method with <a href="https://zju3dv.github.io/enerf/">ENeRF</a>, <a href="https://samsunglabs.github.io/MLI/">SIMPLI</a>, and <a href="https://mohammedsuhail.net/gen_patch_neural_rendering/">GPNR</a> on <a href="https://www.matthewtancik.com/nerf">Real Forward-facing</a>, <a href="https://nex-mpi.github.io/">Shiny</a>, and <a href="https://github.com/facebookresearch/Neural_3D_Video">Neural 3D Video</a> datasets. We then comapre our method with <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3DGS</a>, <a href="https://nvlabs.github.io/instant-ngp/">Instant NGP</a>, <a href="https://jonbarron.info/mipnerf360/">MipNeRF-360</a>, <a href="https://docs.nerf.studio/nerfology/methods/nerfacto.html">Nerfacto</a>, <a href="https://jonbarron.info/zipnerf/">ZipNeRF</a> on the <a href="https://dl3dv-10k.github.io/DL3DV-10K/">DL3DV</a> dataset. Finally, we show <a href="https://quark-3d.github.io/results/image_results/3dgs/index.html"><comparisons< a=""> with </comparisons<></a><a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3DGS</a>, <a href="https://nvlabs.github.io/instant-ngp/">Instant NGP</a>, <a href="https://jonbarron.info/mipnerf360/">MipNeRF-360</a>, and <a href="https://alexyu.net/plenoxels/">Plenoxels</a> on the <a href="https://jonbarron.info/mipnerf360/">Mip-NeRF360, </a><a href="https://www.tanksandtemples.org/">Tanks&amp;Temples</a>, and <a href="http://visual.cs.ucl.ac.uk/pubs/deepblending/">Deep Blending</a> datasets. </p> -->
           </div>
           
           <div class="tile is-ancestor is-vertical">
             <div class="tile is-parent">
               <div class="tile is-child has-text-vcentered">
                 <a href="https://quark-3d.github.io/results/image_results/rff/index.html"><img src="./Quark_ Real-time, High-resolution, and General Neural View Synthesis_files/rff.jpg" class="img thumbnails"></a>
-                <br>View result comparison on <a href="https://quark-3d.github.io/results/image_results/rff/index.html"><strong>Real Foward-Facing (RFF) Dataset</strong></a>.
+                <br>View result comparison on <a href="https://quark-3d.github.io/results/image_results/rff/index.html"><strong>DL3DV</strong></a>.
               </div>
 
               <div class="tile is-child has-text-vcentered">
                 <a href="https://quark-3d.github.io/results/image_results/shiny/index.html"><img src="./Quark_ Real-time, High-resolution, and General Neural View Synthesis_files/shiny.jpg" class="img thumbnails"></a>
-                <br>View result comparison on <a href="https://quark-3d.github.io/results/image_results/shiny/index.html"><strong>Shiny</strong></a>.
+                <br>View result comparison on <a href="https://quark-3d.github.io/results/image_results/shiny/index.html"><strong>RealEstate10K</strong></a>.
               </div>
             </div>
 
             <div class="tile is-parent">
               <div class="tile is-child has-text-vcentered">
                 <a href="https://quark-3d.github.io/results/image_results/neural_3d_video/index.html"><img src="./Quark_ Real-time, High-resolution, and General Neural View Synthesis_files/neural_3d_video.jpg" class="img thumbnails"></a>
-                <br>View result comparison on <a href="https://quark-3d.github.io/results/image_results/neural_3d_video/index.html"><strong>Neural 3D Video</strong></a>.
+                <br>View result comparison on <a href="https://quark-3d.github.io/results/image_results/neural_3d_video/index.html"><strong>Tanks&Temples</strong></a>.
               </div>
 
               <div class="tile is-child has-text-vcentered">
                 <a href="https://quark-3d.github.io/results/image_results/dl3dv/index.html"><img src="./Quark_ Real-time, High-resolution, and General Neural View Synthesis_files/dl3dv.jpg" class="img thumbnails"></a>
-                <br>View result comparison on <a href="https://quark-3d.github.io/results/image_results/dl3dv/index.html"><strong>DL3DV</strong></a>.
-              </div>
-            </div>
-
-            <div class="tile is-parent">
-              <div class="tile is-child has-text-vcentered">
-                <a href="https://quark-3d.github.io/results/image_results/3dgs/index.html"><img src="./Quark_ Real-time, High-resolution, and General Neural View Synthesis_files/3dgs.jpg" class="img thumbnails"></a>
-                <br>View result comparison on <a href="https://quark-3d.github.io/results/image_results/3dgs/index.html"><strong>Mip-NeRF360</strong>, <strong>Tanks&amp;Temples</strong>, and <strong>Deep Blending</strong> dataset</a>.
-              </div>
-
-              <div class="tile is-child has-text-vcentered">
+                <br>View result comparison on <a href="https://quark-3d.github.io/results/image_results/dl3dv/index.html"><strong>Mip-NeRF360</strong></a>.
               </div>
             </div>
 
@@ -693,7 +686,8 @@
           <h2 class="title is-3 has-text-centered" id="ablation">Ablation Study</h2>
           
           <div class="paragraph">
-          	<p>We first ablate our design choices and show corresponding image comparisons. We then present video result comparsions of two variants of our method, <em>Quark</em> and <em>Quark+</em>.</p>
+            <p>We ablate our design choices and show corresponding image comparisons. We then present visual result comparisons of two variants of our method, LVT<sub>SH-rgba</sub> and LVT<sub>base</sub>.</p>
+          	<!-- <p>We first ablate our design choices and show corresponding image comparisons. We then present video result comparsions of two variants of our method, <em>Quark</em> and <em>Quark+</em>.</p> -->
           </div>
           <div class="tile is-ancestor is-vertical">
             <div class="tile is-parent">
@@ -704,7 +698,7 @@
 
               <div class="tile is-child has-text-vcentered">
                 <a href="https://quark-3d.github.io/results/ablations/quark_vs_quarkHQ/index.html"><img src="./Quark_ Real-time, High-resolution, and General Neural View Synthesis_files/quark_vs_quarkHQ.jpg" class="img thumbnails"></a>
-                <br>View <a href="https://quark-3d.github.io/results/ablations/quark_vs_quarkHQ/index.html"><strong>video comparison</strong></a> between <strong>Quark</strong> and <strong>Quark+</strong>.
+                <br>View <a href="https://quark-3d.github.io/results/ablations/quark_vs_quarkHQ/index.html"><strong>video comparison</strong></a> between <strong>LVT<sub>base</sub></strong> and <strong>LVT<sub>SH-rgba</sub></strong>.
               </div>
             </div>
           </div>

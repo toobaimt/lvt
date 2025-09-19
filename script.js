@@ -26,17 +26,17 @@ $("#train-video").on('loadedmetadata', function() {
 
 $(function() {
     current_train_idx = 0;
-    current_greenhouse_idx = 0;
+    current_glassbuilding_idx = 0;
     current_building_idx = 0;
     current_temple_idx = 0;
 
     trainVideo = document.getElementById('train-video');
-    greenhouseVideo = document.getElementById('greenhouse-video');
+    glassbuildingVideo = document.getElementById('glassbuilding-video');
     buildingVideo = document.getElementById('building-video');
     templeVideo = document.getElementById('temple-video');
 
     trainText = document.getElementById('train-text');
-    greenhouseText = document.getElementById('greenhouse-text');
+    glassbuildingText = document.getElementById('glassbuilding-text');
     buildingText = document.getElementById('building-text');
     templeText = document.getElementById('temple-text');
 
@@ -52,18 +52,18 @@ $(function() {
       }
       change_train_index(current_train_idx);
 
-    greenhouseThumbnails = [
-        document.getElementById('lvtSH-greenhouse'),
-        document.getElementById('lvt-base-greenhouse'),
-        document.getElementById('llrm-greenhouse'),
-        document.getElementById('3dgs-greenhouse'),
-        document.getElementById('lvtSH-greenhouse_depth'),
-        document.getElementById('lvt-base-greenhouse_depth'),
+    glassbuildingThumbnails = [
+        document.getElementById('lvtSH-glassbuilding'),
+        document.getElementById('lvt-base-glassbuilding'),
+        document.getElementById('llrm-glassbuilding'),
+        document.getElementById('3dgs-glassbuilding'),
+        document.getElementById('lvtSH-glassbuilding_depth'),
+        document.getElementById('lvt-base-glassbuilding_depth'),
       ];
-      for (var i = 0; i < greenhouseThumbnails.length; i++) {
-        greenhouseThumbnails[i].addEventListener('click', change_greenhouse_index.bind(this, i));
+      for (var i = 0; i < glassbuildingThumbnails.length; i++) {
+        glassbuildingThumbnails[i].addEventListener('click', change_glassbuilding_index.bind(this, i));
       }
-      change_greenhouse_index(current_greenhouse_idx);
+      change_glassbuilding_index(current_glassbuilding_idx);
 
     buildingThumbnails = [
         document.getElementById('lvtSH-building'),
@@ -105,15 +105,15 @@ function change_train_index (idx) {
     trainVideo.load();
 }
 
-function change_greenhouse_index (idx) {
-    greenhouseThumbnails[idx].classList.add("active-btn");
-    if (current_greenhouse_idx != idx) {
-        greenhouseThumbnails[current_greenhouse_idx].classList.remove("active-btn");
+function change_glassbuilding_index (idx) {
+    glassbuildingThumbnails[idx].classList.add("active-btn");
+    if (current_glassbuilding_idx != idx) {
+        glassbuildingThumbnails[current_glassbuilding_idx].classList.remove("active-btn");
     }
-    current_greenhouse_idx = idx;
-    greenhouseText.innerHTML = textStrings[idx];
-    greenhouseVideo.src = "./lvt-files/results/video-results/" + greenhouseThumbnails[idx].id + ".mp4";
-    greenhouseVideo.load();
+    current_glassbuilding_idx = idx;
+    glassbuildingText.innerHTML = textStrings[idx];
+    glassbuildingVideo.src = "./lvt-files/results/video-results/" + glassbuildingThumbnails[idx].id + ".mp4";
+    glassbuildingVideo.load();
 }
 
 function change_building_index (idx) {

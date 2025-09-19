@@ -198,7 +198,7 @@ body {
 /* #trex-video,
 #welder-video,
 #tools-video { */
-#greenhouse-video,
+#glassbuilding-video,
 #building-video,
 #train-video,
 #temple-video {
@@ -300,7 +300,7 @@ body {
 .trex-thumbnail-col { */
 .temple-thumbnail-col,
 .building-thumbnail-col,
-.greenhouse-thumbnail-col {
+.glassbuilding-thumbnail-col {
     width: 16.5%;
 }
 
@@ -309,7 +309,7 @@ body {
 }
 
 /* .welder-thumbnail-row, .trex-thumbnail-row, .tools-thumbnail-row { */
-.temple-thumbnail-row, .building-thumbnail-row, .train-thumbnail-row, .greenhouse-thumbnail-row {
+.temple-thumbnail-row, .building-thumbnail-row, .train-thumbnail-row, .glassbuilding-thumbnail-row {
     display: inline-block;
     width: 70%;
     margin-left: auto;
@@ -619,7 +619,7 @@ input:checked + .slider:before {
         width: 100%;
     }
 
-    .greenhouse-thumbnail-row {
+    .glassbuilding-thumbnail-row {
         width: 100%;
     }
 
