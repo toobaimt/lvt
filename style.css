@@ -2,7 +2,7 @@ body {
     margin: 0;
     min-height: 100%;
     background-color: #fff;
-    font-family: 'Open Sans',sans-serif;
+    /* font-family: 'Open Sans',sans-serif; */
     color: #333;
     font-size: 12px;
     line-height: 20px;
@@ -24,7 +24,7 @@ body {
 .title {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-family: 'Varela Round',sans-serif;
+    /* font-family: 'Open Sans',sans-serif; */
     color: #4d4d4d;
     font-size: 50px;
     line-height: 65px;
@@ -35,7 +35,7 @@ body {
 .subheader {
     margin-top: 0;
     margin-bottom: 10px;
-    font-family: 'Open Sans',sans-serif;
+    /* font-family: 'Open Sans',sans-serif; */
     color: #333;
     font-size: 25px;
     line-height: 44px;
@@ -46,7 +46,7 @@ body {
 .section-header {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-family: 'Varela Round',sans-serif;
+    /* font-family: 'Open Sans',sans-serif; */
     color: #4d4d4d;
     font-size: 30px;
     line-height: 65px;
@@ -57,7 +57,7 @@ body {
 .tldr {
     margin-top: 30px;
     margin-bottom: 3px;
-    font-family: 'Open Sans',sans-serif;
+    /* font-family: 'Open Sans',sans-serif; */
     color: #333;
     font-size: 18px;
     line-height: 24px;
@@ -88,11 +88,19 @@ body {
 }
 
 .author-col {
-    width: 20%;
+    margin-left: 70px;
+    margin-right: -170px;
+    width: 25%;
+}
+
+.author-col-2 {
+    margin-left: 270px;
+    margin-right: -180px;
+    width: 30%;
 }
 
 .author-text {
-    font-family: 'Open Sans',sans-serif;
+    /* font-family: 'Open Sans',sans-serif; */
     color: #333;
     font-size: 16px;
     font-weight: 400;
@@ -109,7 +117,7 @@ body {
 
 #uc-berkeley {
     padding-top: 10px;
-    font-family: 'Open Sans',sans-serif;
+    /* font-family: 'Open Sans',sans-serif; */
     color: #333;
     font-size: 16px;
     font-weight: 400;
@@ -119,7 +127,7 @@ body {
 
 #equal-contrib {
     padding-top: 10px;
-    font-family: 'Open Sans',sans-serif;
+    /* font-family: 'Open Sans',sans-serif; */
     color: #333;
     font-size: 16px;
     font-weight: 400;
@@ -168,7 +176,7 @@ body {
 }
 
 .link-labels-text {
-    font-family: 'Open Sans',sans-serif;
+    /* font-family: 'Open Sans',sans-serif; */
     color: #333;
     font-size: 14px;
 }
@@ -187,11 +195,15 @@ body {
     margin-bottom: 10px;
 }
 
-#trex-video,
+/* #trex-video,
 #welder-video,
-#tools-video {
+#tools-video { */
+#greenhouse-video,
+#building-video,
+#train-video,
+#temple-video {
     width: 100%;
-    margin-top: 0px;
+    margin-top: -50px;
     margin-bottom: 0px;
     border-radius: 10px;
     aspect-ratio: 4 / 3;
@@ -235,7 +247,7 @@ body {
 .paragraph {
     margin-top: 0px;
     margin-bottom: 20px;
-    font-family: 'Open Sans',sans-serif;
+    /* font-family: 'Open Sans',sans-serif; */
     color: #333;
     font-size: 16px;
     line-height: 24px;
@@ -247,7 +259,7 @@ body {
 .paragraph-center {
     margin-top: 0px;
     /* margin-bottom: 20px; */
-    font-family: 'Open Sans',sans-serif;
+    /* font-family: 'Open Sans',sans-serif; */
     color: #333;
     font-size: 16px;
     line-height: 24px;
@@ -283,13 +295,21 @@ body {
     background-color: #d9e8ec;
 }
 
-.welder-thumbnail-col,
+/* .welder-thumbnail-col,
 .tools-thumbnail-col,
-.trex-thumbnail-col {
-    width: 14%;
+.trex-thumbnail-col { */
+.temple-thumbnail-col,
+.building-thumbnail-col,
+.greenhouse-thumbnail-col {
+    width: 16.5%;
 }
 
-.welder-thumbnail-row, .trex-thumbnail-row, .tools-thumbnail-row {
+.train-thumbnail-col {
+    width: 20%;
+}
+
+/* .welder-thumbnail-row, .trex-thumbnail-row, .tools-thumbnail-row { */
+.temple-thumbnail-row, .building-thumbnail-row, .train-thumbnail-row, .greenhouse-thumbnail-row {
     display: inline-block;
     width: 70%;
     margin-left: auto;
@@ -345,7 +365,7 @@ body {
 }
 
 #opacity {
-    font-family: 'Open Sans',sans-serif;
+    /* font-family: 'Open Sans',sans-serif; */
     color: #3c3c3c;
     font-size: 20px;
     line-height: 20px;
@@ -519,7 +539,7 @@ input:checked + .slider:before {
 
 .video-text {
     font-size: 24px;
-    margin-top: -50px;
+    margin-top: -140px;
     margin-bottom: 10px;
     color: white;
     position: relative;
@@ -579,7 +599,7 @@ input:checked + .slider:before {
         margin-top: -8vw;
     }
 
-    .tools-thumbnail-row {
+    /* .tools-thumbnail-row {
         width: 100%;
     }
     
@@ -589,6 +609,22 @@ input:checked + .slider:before {
 
     .welder-thumbnail-row {
         width: 80%;
+    } */
+
+    .temple-thumbnail-row {
+        width: 100%;
+    }
+    
+    .building-thumbnail-row {
+        width: 100%;
+    }
+
+    .greenhouse-thumbnail-row {
+        width: 100%;
+    }
+
+    .train-thumbnail-row {
+        width: 100%;
     }
 
     .section-header {
