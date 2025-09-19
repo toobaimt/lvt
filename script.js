@@ -11,15 +11,15 @@ var textStrings = [
 ];
 
 var textStrings_train = [
-    "<em>LVT<sub>SH-rgba</sub></em>",
-    "<em>LVT<sub>base</sub></em>",
+    "<em>LVT<sub>SH-rgba</sub> (zero-shot)</em>",
+    "<em>LVT<sub>base</sub> (zero-shot)</em>",
     "<em>3DGS</em>",
     "<em>LVT<sub>SH-rgba</sub> (depth)</em>",
     "<em>LVT<sub>base</sub> (depth)</em>",
 ];
 
 var textStrings_bicycle = [
-    "<em>LVT<sub>SH-rgba</sub></em>",
+    "<em>LVT<sub>SH-rgba</sub> (zero-shot)</em>",
     "<em>3DGS</em>",
     "<em>LVT<sub>SH-rgba</sub> (depth)</em>",
 ];
