@@ -58,9 +58,32 @@
         <div class="column is-three-quarters content">
           <div class="title-row">
             <h1 class="title is-1 ">LVT: Large-Scale Scene Reconstruction via Local View Transformers</h1>
-            <h1 class="subtitle is-3">Accepted at SIGGRAPH Asia 2025</h1>
+            <h1 class="subtitle is-4">Accepted at SIGGRAPH Asia 2025</h1>
           </div>
-          <div class="base-row author-row">
+            <div class="columns is-multiline is-centered has-text-vcentered">
+              <div class="column is-narrow">
+                <a href="https://toobaimt.github.io">Tooba Imtiaz</a>*<sup>,1,2</sup>
+              </div>
+              <div class="column is-narrow">
+                <a href="https://chail.github.io/">Lucy Chai</a>*<sup>,1</sup>
+              </div>
+              <div class="column is-narrow">
+                <a href="https://www.kathrynheal.com/">Kathryn Heal</a><sup>1</sup>
+              </div>
+              <div class="column is-narrow">
+                <a href="https://roxanneluo.github.io/">Xuan Luo</a><sup>1</sup>
+              </div>
+              <div class="column is-narrow">
+                <a href="http://jungyeonpark.com">Jungyeon Park</a><sup>1</sup>
+              </div>
+              <div class="column is-narrow">
+                <a href="https://mllabneu.github.io">Jennifer Dy</a><sup>2</sup>
+              </div>
+              <div class="column is-narrow">
+                <a href="https://www.linkedin.com/in/john-flynn-5766b11/">John Flynn</a><sup>1</sup>
+              </div>
+            </div>
+          <!-- <div class="base-row author-row">
             <div class="base-col author-col">
               <a href="https://toobaimt.github.io" target="_blank" class="author-text">
                 Tooba Imtiaz*<sup>,1,2</sup>
@@ -107,12 +130,15 @@
               </a>
             </div>
 
-          </div>
-
-        <div class="base-row">
+          </div> -->
+        <!-- <div class="base-row">
             <div class="base-col">
               <p>*Denotes Equal Contribution</p>
             </div>
+        </div> -->
+
+        <div style="margin-top: -10px;">
+          <p>*Denotes Equal Contribution</p>
         </div>
 
 
@@ -120,7 +146,7 @@
           <p id="Google"><sup>1</sup>Google &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <sup>2</sup>Northeastern University</p>
         </div>
 
-            <div class="column is-one-third is-offset-one-third">
+            <div class="column is-one-third is-offset-one-third is-centered">
             <div class="publication-links buttons paragraph">
               <!-- TODO: PDF Link. -->
               <span class="link-block">
@@ -133,7 +159,7 @@
               </span>
 
               <!-- <span class="link-block">
-                <a href="https://dl.acm.org/doi/10.1145/3687953" class="external-link button is-normal is-rounded is-dark"></a>
+                <a href="https://dl.acm.org/doi/10.1145/3687953" class="external-link button is-normal is-rounded is-dark" disabled></a>
                   <span class="icon">
                       <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg>
                   </span>
@@ -447,7 +473,7 @@
               <div class="item-8">
                 <figure class="image is-16by9">
                   <video class="has-ratio" muted controls loop autoplay playsinline>
-                    <source src="./lvt-files/results/carousel-results/lvtSH-temple2.mp4" type="video/mp4" width="100%" height="100%">
+                    <source src="./lvt-files/results/carousel-results/lvtSH-bicycle.mp4" type="video/mp4" width="100%" height="100%">
                       "Your browser does not support the video tag"
                   </video>
                 </figure>
@@ -659,8 +685,33 @@
             </div>
           </div>
 
-          <h2 class="title is-3 has-text-centered" id="image-cmp">Image Result Comparisons</h2>
-	  <div class="paragraph">
+        <video id="bicycle-video" muted="" autoplay="" webkit-playsinline="" playsinline="" loop="" src="./lvt-files/results/video-results/lvtSH-bicycle.mp4">
+          <source id="bicycle-video-src" src="./lvt-files/results/video-results/lvtSH-bicycle.mp4" poster="/data/test.jpg" type="video/mp4">
+        </video>
+          <div class="video-text">
+            <span class="overlay-text" id="bicycle-text"><em>LVTSH</em></span>
+          </div>
+          <div class="base-row bicycle-thumbnail-row">
+            <div class="base-col bicycle-thumbnail-col">
+              <button class="thumbnail-btn active-btn" id="lvtSH-bicycle">
+                LVT<sub>SH-rgba</sub>
+              </button>
+            </div>
+            <div class="base-col bicycle-thumbnail-col">
+              <button class="thumbnail-btn" id="3dgs-bicycle">
+                3DGS
+              </button>
+            </div>
+            <div class="base-col bicycle-thumbnail-col">
+              <button class="thumbnail-btn" id="lvtSH-bicycle_depth">
+                LVT<sub>SH-rgba</sub> (depth)
+              </button>
+            </div>
+          </div>
+
+    <br>
+    <h2 class="title is-3 has-text-vcentered" id="image-cmp">Image Result Comparisons</h2>
+	    <div class="paragraph">
             <p>We train and evaluate our methods, LVT<sub>SH-rgba</sub> and LVT<sub>base</sub>, on <a href="https://dl3dv-10k.github.io/DL3DV-10K/">DL3DV</a> - a large-scale dataset of 4K resolution videos captured from bounded and unbounded real-world scenes for benchmarking novel view synthesis, and <a href="https://google.github.io/realestate10k/">RealEstate10K</a>. LVT surpasses prior methods to achieve state-of-the-art novel view synthesis on large scenes.
             <br>
             We additionally perform zero-shot evaluation on <a href="https://www.tanksandtemples.org/">Tanks&Temples</a> (the train and truck scenes) and <a href="https://jonbarron.info/mipnerf360/">Mip-NeRF360</a> using LVT trained on DL3DV dataset. Despite not being trained on Tanks&Temples, LVT<sub>SH-rgba</sub> surpasses 3DGS in LPIPS, PSNR and SSIM, and performs competitively with 3DGS on Mip-NeRF360. </p>
@@ -675,8 +726,8 @@
               </div>
 
               <div class="tile is-child has-text-vcentered">
-                <a href="https://quark-3d.github.io/results/image_results/shiny/index.html"><img src="./Quark_ Real-time, High-resolution, and General Neural View Synthesis_files/shiny.jpg" class="img thumbnails"></a>
-                <br>View result comparison on <a href="https://quark-3d.github.io/results/image_results/shiny/index.html"><strong>RealEstate10K</strong></a>.
+                <a href="https://toobaimt.github.io/lvt/lvt-files/results/image_results/re10k/index.html"><img src="./lvt-files/results/image_results/re10k/thumb.png" class="img thumbnails"></a>
+                <br>View result comparison on <a href="https://toobaimt.github.io/lvt/lvt-files/results/image_results/re10k/index.html"><strong>RealEstate10K</strong></a>.
               </div>
             </div>
 
@@ -687,8 +738,8 @@
               </div>
 
               <div class="tile is-child has-text-vcentered">
-                <a href="https://quark-3d.github.io/results/image_results/dl3dv/index.html"><img src="./Quark_ Real-time, High-resolution, and General Neural View Synthesis_files/dl3dv.jpg" class="img thumbnails"></a>
-                <br>View result comparison on <a href="https://quark-3d.github.io/results/image_results/dl3dv/index.html"><strong>Mip-NeRF360</strong></a>.
+                <a href="https://toobaimt.github.io/lvt/lvt-files/results/image_results/dl3dv/index.html"><img src="./lvt-files/results/image_results/mipnerf360/thumb.png" class="img thumbnails"></a>
+                <br>View result comparison on <a href="https://toobaimt.github.io/lvt/lvt-files/results/image_results/dl3dv/index.html"><strong>Mip-NeRF360</strong></a>.
               </div>
             </div>
 

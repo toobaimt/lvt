@@ -201,9 +201,10 @@ body {
 #glassbuilding-video,
 #building-video,
 #train-video,
+#bicycle-video,
 #temple-video {
     width: 100%;
-    margin-top: -50px;
+    margin-top: -30px;
     margin-bottom: 0px;
     border-radius: 10px;
     aspect-ratio: 4 / 3;
@@ -306,6 +307,13 @@ body {
 
 .train-thumbnail-col {
     width: 20%;
+}
+
+.bicycle-thumbnail-col {
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 
 /* .welder-thumbnail-row, .trex-thumbnail-row, .tools-thumbnail-row { */
@@ -624,6 +632,10 @@ input:checked + .slider:before {
     }
 
     .train-thumbnail-row {
+        width: 100%;
+    }
+
+    .bicycle-thumbnail-col {
         width: 100%;
     }
 

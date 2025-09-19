@@ -18,6 +18,12 @@ var textStrings_train = [
     "<em>LVT<sub>base</sub> (depth)</em>",
 ];
 
+var textStrings_bicycle = [
+    "<em>LVT<sub>SH-rgba</sub></em>",
+    "<em>3DGS</em>",
+    "<em>LVT<sub>SH-rgba</sub> (depth)</em>",
+];
+
 $("#train-video").on('loadedmetadata', function() {
     this.width = this.videoWidth;
     this.height = this.videoHeight;
@@ -29,16 +35,19 @@ $(function() {
     current_glassbuilding_idx = 0;
     current_building_idx = 0;
     current_temple_idx = 0;
+    current_bicycle_idx = 0;
 
     trainVideo = document.getElementById('train-video');
     glassbuildingVideo = document.getElementById('glassbuilding-video');
     buildingVideo = document.getElementById('building-video');
     templeVideo = document.getElementById('temple-video');
+    bicycleVideo = document.getElementById('bicycle-video');
 
     trainText = document.getElementById('train-text');
     glassbuildingText = document.getElementById('glassbuilding-text');
     buildingText = document.getElementById('building-text');
     templeText = document.getElementById('temple-text');
+    bicycleText = document.getElementById('bicycle-text');
 
     trainThumbnails = [
         document.getElementById('lvtSH-train'),
@@ -92,6 +101,15 @@ $(function() {
       }
       change_temple_index(current_temple_idx);
 
+    bicycleThumbnails = [
+        document.getElementById('lvtSH-bicycle'),
+        document.getElementById('3dgs-bicycle'),
+        document.getElementById('lvtSH-bicycle_depth'),
+      ];
+      for (var i = 0; i < bicycleThumbnails.length; i++) {
+        bicycleThumbnails[i].addEventListener('click', change_bicycle_index.bind(this, i));
+      }
+      change_bicycle_index(current_bicycle_idx);
   });
   
 function change_train_index (idx) {
@@ -136,4 +154,15 @@ function change_temple_index (idx) {
     templeText.innerHTML = textStrings[idx];
     templeVideo.src = "./lvt-files/results/video-results/" + templeThumbnails[idx].id + ".mp4";
     templeVideo.load();
+}
+
+function change_bicycle_index (idx) {
+    bicycleThumbnails[idx].classList.add("active-btn");
+    if (current_bicycle_idx != idx) {
+        bicycleThumbnails[current_bicycle_idx].classList.remove("active-btn");
+    }
+    current_bicycle_idx = idx;
+    bicycleText.innerHTML = textStrings_bicycle[idx];
+    bicycleVideo.src = "./lvt-files/results/video-results/" + bicycleThumbnails[idx].id + ".mp4";
+    bicycleVideo.load();
 }
