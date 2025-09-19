@@ -1,10 +1,10 @@
 <!doctype html><meta charset=utf-8>
 
-<title>Comparisons with Baselines on DL3DV</title>
-<h2>Comparisons with Baselines on DL3DV</h2>
+<title>Comparisons on RealEstate10k</title>
+<h2>Comparisons on RealEstate10k</h2>
 
 
-<p>Here we show rendered views from our method and other baselines on the <a href="https://dl3dv-10k.github.io/DL3DV-10K/">DL3DV</a>. <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3DGS</a> is the baseline.
+<p>Here we show rendered views from our method vs. ground truth on the <a href="https://google.github.io/realestate10k/">RealEstate10k</a> dataset.
 </p>
 <p>
 	Hover over the labels at the left to select which output to view. Hold mouse down anywhere to flip to ground truth for comparison.
@@ -43,10 +43,7 @@ body {
 
 controls.s1 .label:nth-child(1),
 controls.s2 .label:nth-child(2),
-controls.s3 .label:nth-child(3),
-controls.s4 .label:nth-child(4),
-controls.s5 .label:nth-child(5),
-controls.s6 .label:nth-child(6) {
+controls.s3 .label:nth-child(3) {
   background: #48a;
   color: #fff;
 }
@@ -54,9 +51,9 @@ controls.s6 .label:nth-child(6) {
 #examples > div {
   display: inline-block;
   position: relative;
-  width: 960px;
+  width: 500px;
   max-width: 100%;
-  aspect-ratio: 960 / 540;
+  aspect-ratio: 1;
   background: #444;
 }
 
@@ -100,25 +97,16 @@ controls.s6 .label:nth-child(6) {
 }
 
 #examples.s1 > div::after { content: "Ground truth"; }
-#examples.s2 > div::after { content: "LVT-SH-rgba"; }
-#examples.s3 > div::after { content: "LVT base"; }
-#examples.s4 > div::after { content: "3DGS"; }
-#examples.s6 > div::after { content: "LVT SH-rgba (depth)"; }
-#examples.s7 > div::after { content: "LVT base (depth)"; }
+#examples.s2 > div::after { content: "LVT base"; }
+#examples.s3 > div::after { content: "LVT base (depth)"; }
 
 #examples.s1 > div > img:nth-child(1),
 #examples.s2 > div > img:nth-child(2),
 #examples.s3 > div > img:nth-child(3),
-#examples.s4 > div > img:nth-child(4),
-#examples.s5 > div > img:nth-child(5),
-#examples.s6 > div > img:nth-child(6),
 
 #examples.s1 > div > video:nth-child(1),
 #examples.s2 > div > video:nth-child(2),
-#examples.s3 > div > video:nth-child(3),
-#examples.s4 > div > video:nth-child(4),
-#examples.s5 > div > video:nth-child(5),
-#examples.s6 > div > video:nth-child(6) {
+#examples.s3 > div > video:nth-child(3) {
   visibility: inherit;
 }
 
@@ -127,58 +115,58 @@ controls.s6 .label:nth-child(6) {
 
 <div class="s1" id="controls">
   <div class="label" onmouseenter="over(1)">Ground truth</div>
-  <div class="label" onmouseenter="over(2)">LVT<sub>SH-rgba</sub></div>
-  <div class="label" onmouseenter="over(3)">LVT<sub>base</sub></div>
-  <div class="label" onmouseenter="over(4)">3DGS</div>
-  <div class="label" onmouseenter="over(6)">LVT<sub>SH-rgba</sub> depth</div>
-  <div class="label" onmouseenter="over(7)">LVT<sub>base</sub> depth</div>
+  <div class="label" onmouseenter="over(2)">LVT<sub>base</sub></div>
+  <div class="label" onmouseenter="over(3)">LVT<sub>base</sub> depth</div>
 </div>
 <div class="s1" id="examples">
   <div>
     <img src="0/actual.png" width="100%">
-    <img src="0/lvt_sh2_density_sh2.png" width="100%">
     <img src="0/lvt_base.png" width="100%">
-    <img src="0/3dgs.png" width="100%">
-    <img src="0/lvt_sh2_density_sh2_depth.png" width="100%">
     <img src="0/lvt_base_depth.png" width="100%">
-    <span>0/</span>
+    <span></span>
   </div>
   <div>
     <img src="1/actual.png" width="100%">
-    <img src="1/lvt_sh2_density_sh2.png" width="100%">
     <img src="1/lvt_base.png" width="100%">
-    <img src="1/3dgs.png" width="100%">
-    <img src="1/lvt_sh2_density_sh2_depth.png" width="100%">
     <img src="1/lvt_base_depth.png" width="100%">
-    <span>1/</span>
+    <span></span>
   </div>
   <div>
     <img src="2/actual.png" width="100%">
-    <img src="2/lvt_sh2_density_sh2.png" width="100%">
     <img src="2/lvt_base.png" width="100%">
-    <img src="2/3dgs.png" width="100%">
-    <img src="2/lvt_sh2_density_sh2_depth.png" width="100%">
     <img src="2/lvt_base_depth.png" width="100%">
-    <span>2/</span>
+    <span></span>
   </div>
   <div>
     <img src="3/actual.png" width="100%">
-    <img src="3/lvt_sh2_density_sh2.png" width="100%">
     <img src="3/lvt_base.png" width="100%">
-    <img src="3/3dgs.png" width="100%">
-    <img src="3/lvt_sh2_density_sh2_depth.png" width="100%">
     <img src="3/lvt_base_depth.png" width="100%">
-    <span>3/</span>
+    <span></span>
   </div>
-  <!-- <div>
+  <div>
     <img src="4/actual.png" width="100%">
-    <img src="4/lvt_sh2_density_sh2.png" width="100%">
     <img src="4/lvt_base.png" width="100%">
-    <img src="4/3dgs.png" width="100%">
-    <img src="4/lvt_sh2_density_sh2_depth.png" width="100%">
     <img src="4/lvt_base_depth.png" width="100%">
-    <span>4/</span>
-  </div> -->
+    <span></span>
+  </div>
+  <div>
+    <img src="5/actual.png" width="100%">
+    <img src="5/lvt_base.png" width="100%">
+    <img src="5/lvt_base_depth.png" width="100%">
+    <span></span>
+  </div>
+  <div>
+    <img src="6/actual.png" width="100%">
+    <img src="6/lvt_base.png" width="100%">
+    <img src="6/lvt_base_depth.png" width="100%">
+    <span></span>
+  </div>
+  <div>
+    <img src="7/actual.png" width="100%">
+    <img src="7/lvt_base.png" width="100%">
+    <img src="7/lvt_base_depth.png" width="100%">
+    <span></span>
+  </div>
   <!-- <div>
     <img src="14/actual.png" width="100%">
     <img src="14/lvt_sh2_density_sh2.png" width="100%">
