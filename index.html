@@ -186,25 +186,6 @@
                   <span>Video</span>
                 </a>
               </span>
-              <!-- Code Link.
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span> -->
-              <!-- Dataset Link.
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
             </div>
           </div>
           <br>
@@ -748,10 +729,10 @@
           <h2 class="title is-3 has-text-centered" id="ablation">Ablation Study</h2>
           
           <div class="paragraph">
-            <p>We ablate our design choices and show corresponding image comparisons. We then present visual result comparisons of two variants of our method, LVT<sub>SH-rgba</sub> and LVT<sub>base</sub>.</p>
+            <p>We ablate our design choices and show corresponding video/image comparisons.</p>
           	<!-- <p>We first ablate our design choices and show corresponding image comparisons. We then present video result comparsions of two variants of our method, <em>Quark</em> and <em>Quark+</em>.</p> -->
           </div>
-          <div class="tile is-ancestor is-vertical">
+          <!-- <div class="tile is-ancestor is-vertical">
             <div class="tile is-parent">
               <div class="tile is-child has-text-vcentered">
                 <a href="https://quark-3d.github.io/results/ablations/algorithm_ablation_image_results/index.html"><img src="./Quark_ Real-time, High-resolution, and General Neural View Synthesis_files/ablation.jpg" class="img thumbnails"></a>
@@ -763,6 +744,65 @@
                 <br>View <a href="https://quark-3d.github.io/results/ablations/quark_vs_quarkHQ/index.html"><strong>video comparison</strong></a> between <strong>LVT<sub>base</sub></strong> and <strong>LVT<sub>SH-rgba</sub></strong>.
               </div>
             </div>
+          </div> -->
+          <div class="paragraph">
+            <p><b>Impact of view-dependent opacity:</b> Adding spherical harmonics on the opacity (in addition to color) significantly enhances the modeling of thin structures and reflective surfaces.</p>
+          </div>
+          <div class="tile is-ancestor is-vertical">
+            <div class="tile is-parent">
+              <div class="tile is-child has-text-vcentered">
+                <figure class="image">
+                  <video class="has-ratio" muted loop autoplay playsinline>
+                    <source src="./lvt-files/results/ablations/view-dep/full-sh-ovens.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <figcaption class="has-text-centered">with view-dependent opacity and color</figcaption>
+                </figure>
+              </div>
+              <div class="tile is-child has-text-vcentered">
+                <figure class="image">
+                  <video class="has-ratio" muted loop autoplay playsinline>
+                    <source src="./lvt-files/results/ablations/view-dep/rgb-sh-ovens.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <figcaption class="has-text-centered">with only view-dependent color</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="tile is-ancestor is-vertical">
+            <div class="tile is-parent">
+              <div class="tile is-child has-text-vcentered">
+                <figure class="image">
+                  <video class="has-ratio" muted loop autoplay playsinline>
+                    <source src="./lvt-files/results/ablations/view-dep/full-sh-table.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <figcaption class="has-text-centered">with view-dependent opacity and color</figcaption>
+                </figure>
+              </div>
+              <div class="tile is-child has-text-vcentered">
+                <figure class="image">
+                  <video class="has-ratio" muted loop autoplay playsinline>
+                    <source src="./lvt-files/results/ablations/view-dep/rgb-sh-table.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <figcaption class="has-text-centered">with only view-dependent color</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="paragraph">
+            <p><b>Impact of mixed-resolution training:</b> Our model trained with the mixed-resolution training strategy surpasses the model trained with a single input resolution. Training the mixed-resolution model on longer sequences including lower resolutions enables it to develop a more comprehensive understanding of scene structure, that it then can transfer to higher resolutions.</p>
+          </div>
+          <div style="text-align: center;">
+            <img src="./lvt-files/results/ablations/mixres-ablation.png" alt="Impact of mixed-resolution training" style="max-width: 60%; height: auto;">
+          </div>
+
+          <div class="paragraph">
+            <p>For more ablations, refer to the paper.</p>
           </div>
 
           <br>
