@@ -204,7 +204,7 @@ body {
 #bicycle-video,
 #temple-video {
     width: 100%;
-    margin-top: -30px;
+    margin-top: -10px;
     margin-bottom: 0px;
     border-radius: 10px;
     aspect-ratio: 4 / 3;
@@ -273,10 +273,10 @@ body {
     width: 90%;
     overflow: hidden;
     margin-top: 10px;
-    # margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    /* display: block; */
 }
 
 .thumbnail-btn {
