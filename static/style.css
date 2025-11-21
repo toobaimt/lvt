@@ -181,6 +181,14 @@ body {
     font-size: 14px;
 }
 
+.video-comparison {
+  font-size: 0;
+}
+
+.tabs-widget>.tabs-content>div {
+  display: hidden;
+}
+
 #main-video {
     width: 90%;
     /* max-width: 750px; */
@@ -205,6 +213,24 @@ body {
 #temple-video {
     width: 100%;
     margin-top: -10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    aspect-ratio: 4 / 3;
+}
+
+#bicyclecomp-video {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    aspect-ratio: 4 / 3;
+}
+
+#glassbuildingcomp-video,
+#buildingcomp-video,
+#templecomp-video {
+    width: 100%;
+    margin-top: 10px;
     margin-bottom: 0px;
     border-radius: 10px;
     aspect-ratio: 4 / 3;
@@ -316,15 +342,46 @@ body {
     margin-bottom: 20px;
 }
 
-/* .welder-thumbnail-row, .trex-thumbnail-row, .tools-thumbnail-row { */
-.temple-thumbnail-row, .building-thumbnail-row, .train-thumbnail-row, .glassbuilding-thumbnail-row {
-    display: inline-block;
-    width: 70%;
+.bicycle-comp-thumbnail-col {
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
 }
 
+.train-comp-thumbnail-col {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.glassbuilding-comp-thumbnail-col,
+.building-comp-thumbnail-col,
+.temple-comp-thumbnail-col {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+/* .welder-thumbnail-row, .trex-thumbnail-row, .tools-thumbnail-row { */
+/* .temple-thumbnail-row, .building-thumbnail-row, .train-thumbnail-row, .glassbuilding-thumbnail-row {
+    display: inline-block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+} */
+
+.bicycle-comp-thumbnail-row, .glassbuilding-comp-thumbnail-row, .building-comp-thumbnail-row, .temple-comp-thumbnail-row, .train-comp-thumbnail-row {
+    display: inline-block;
+    width: 70%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
 
 :root {
     --opacity: 50;
@@ -636,6 +693,14 @@ input:checked + .slider:before {
     }
 
     .bicycle-thumbnail-col {
+        width: 100%;
+    }
+
+    .bicycle-comp-thumbnail-col {
+        width: 100%;
+    }
+
+    .bicycle-comp-thumbnail-row {
         width: 100%;
     }
 
