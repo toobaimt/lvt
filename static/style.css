@@ -365,6 +365,24 @@ body {
     margin-bottom: 20px;
 }
 
+.publication-links {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  gap: 0.5em;               /* no spacing */
+}
+
+.publication-links .link-block {
+  display: inline-flex;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.publication-links .button {
+  margin: 0 !important;
+}
+
+
 /* .welder-thumbnail-row, .trex-thumbnail-row, .tools-thumbnail-row { */
 /* .temple-thumbnail-row, .building-thumbnail-row, .train-thumbnail-row, .glassbuilding-thumbnail-row {
     display: inline-block;
